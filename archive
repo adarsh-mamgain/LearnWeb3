@@ -1,0 +1,17 @@
+"""
+Python code to calculate time period
+required to earn certain amount of money
+"""
+principal = float(input("Principal: "))
+rate = float(input("Rate of Interest: "))
+request = float(input("Request: "))
+COUNT = 0
+
+
+while True:
+    COUNT += 1
+    principal = principal + (principal*rate/100)
+    print(f"{principal:.2f}")
+    if request <= principal:
+        print("After",COUNT,"x compounding you'll recieve",round(principal, 2))
+        break
